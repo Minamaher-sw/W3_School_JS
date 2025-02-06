@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="div1">hi mina </div>
+        <button onclick="turnOn()">turnOnLight</button>
+        <img id="img1" src="img/pic_bulboff.gif" alt="led off" width="120px">
+        <button onclick="turnOff()">turnOfLight</button>
+
+        <script>
+            document.getElementById('div1').innerHTML += "adding style" ;
+            document.getElementById('div1').style.color= "white" ;
+            document.getElementById('div1').style.display="block" ;
+            document.getElementById('div1').style.border="2px solid blue" ;
+            document.getElementById('div1').style.backgroundColor= "black" ;
+        </script>
+        <!-- JavaScript Print
+        JavaScript does not have any print object or print methods.
+
+        You cannot access output devices from JavaScript.
+
+        The only exception is that you can call the window.print() method in the browser to print the content of the current window. -->
+        <br>
+        <button onclick="print()">print this page</button>
+    </body>
+</html>
