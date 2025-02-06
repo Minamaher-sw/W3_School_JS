@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            /*
+            JavaScript Let
+            The let keyword was introduced in ES6 (2015)
+
+            Variables declared with let have Block Scope
+
+            Variables declared with let must be Declared before use
+
+            Variables declared with let cannot be Redeclared in the same scope
+            */
+            //Block Scope
+            for(let i =0 ;i<3 ;i++)
+                {
+                    console.log(i) ;
+                }
+            //Uncaught ReferenceError: i is not defined
+            // console.log(i) ;
+            
+            /* Global Scope
+            Variables declared with the var always have Global Scope.
+
+            Variables declared with the var keyword can NOT have block scope: */
+            for(var i =0 ;i<3 ;i++)
+                {
+                    console.log(i) ;
+                }
+
+            /* Cannot be Redeclared
+            Variables defined with let can not be redeclared.
+
+            You can not accidentally redeclare a variable declared with let. */
+            var x =10 ;
+            var x =3 ;
+            console.log("x after Redeclared is " + x);
+
+            let y1 =10 ;
+            //in same scope Cannot redeclare block-scoped variable 'y1' 
+            // let y1 =3 ; 
+            console.log("yy not redeclare Bof Let "+y1);
+            
+            /* Redeclaring Variables
+            Redeclaring a variable using the var keyword can impose problems.
+
+            Redeclaring a variable inside a block will also redeclare the variable outside the block: */
+            var num =10 ;
+            console.log("num out internal scope "+num) ;
+            {
+                var num =20 ;
+                console.log("num internal scope "+num) ;
+
+            }
+            console.log("num out internal scope "+num) ;
+            /*
+            out 
+            num out internal scope 10  
+            num internal scope 20
+            num out internal scope 20 this promblem
+            */
+
+            //let solve this problem
+            // let cna redeclared in different scope 
+            let num1 =10 ;
+            console.log("num out internal scope "+num1) ;
+            {
+                let num1 =20 ;
+                console.log("num internal scope "+num1) ;
+
+            }
+            console.log("num out internal scope "+num1) ;
+
+            /*
+            Let Hoisting
+            Variables defined with var are hoisted to the top and can be initialized at any time.
+
+            Meaning: You can use the variable before it is declared:
+            */
+            firstName = "Mina" ;
+            var firstName ;
+            console.log(firstName) ;
+
+            // lastName = "maher" ;
+            // let lastName ;
+            //part1.html:88 Uncaught ReferenceError: Cannot access 'lastName' before initialization
+            // console.log(lastName) ;
+            
+            //solution of this error 
+            let lastName ;
+            lastName = "maher" ;
+            console.log(lastName) ;
+            /* 
+            JavaScript Const
+            The const keyword was introduced in ES6 (2015)
+
+            Variables defined with const cannot be Redeclared
+
+            Variables defined with const cannot be Reassigned
+
+            Variables defined with const have Block Scope
+            */
+        //    Cannot be Reassigned A variable defined with the const keyword cannot be reassigned:
+        const val = 12 
+        //error Uncaught TypeError: Assignment to constant variable.
+        // val =10 ;  
+        // val++ ; 
+        console.log(val)
+
+        /*
+        Must be Assigned
+        JavaScript const variables must be 
+        assigned a value when they are declared: */
+        //'const' declarations must be initialized.javascript
+        // const val1 ;
+        // val1 =12 ;
+        const val1 =10 ;
+
+        /* Constant Objects and Arrays
+        The keyword const is a little misleading.
+
+        It does not define a constant value. It defines a constant reference to a value.
+
+        Because of this you can NOT:
+
+        Reassign a constant value
+        Reassign a constant array
+        Reassign a constant object
+        But you CAN:
+
+        Change the elements of constant array
+        Change the properties of constant object
+        */
+       const cars =["tyota" , "marc" ,"oudi"]
+       //error  Uncaught TypeError: Assignment to constant variable.
+       //cars =[12 ,13,14] ;
+       //Change the elements of constant array
+       cars[0]="BMW" ;
+       cars.push("Borsh")
+       console.log(cars)
+
+       /* 
+       Constant Objects
+        You can change the properties of a constant object:
+       */
+      const car =
+            {
+            name :"tyota" ,
+            model :2013 ,
+            color :'white' 
+            }
+        //Uncaught TypeError: Assignment to constant variable.
+        //  car ={}
+            car.name="BMW" ;
+            car["owner"] ="Mina Maher"
+            console.log(car)
+        /*
+            Block Scope
+            Declaring a variable with const is similar
+            to let when it comes to Block Scope.
+            */
+        const numVal1 =10 ;
+        //SyntaxError: Identifier 'numVal1' has already been declared
+        //const numVal1 =20 ;
+        const numval2 =10 
+        {
+            const numVal2 =12 ;
+            //not allowed
+            // numVal2 =100 ;
+            // var numVal2 =1000 ;
+            // let numVal2 =10 ;
+            //const numVal2 =1 ; 
+        }
+
+        /*
+        Hoisting
+        Variables defined with var are hoisted to the top and can be initialized at any time.
+
+        Meaning: You can use the variable before it is declared:
+        */
+       //ReferenceError: Cannot access 'text' before 
+        //    alert(text) ;
+        //    const text ="Hi Mina Maher"
+
+        //solution 
+        const text ="Hi Mina Maher"
+        alert(text) ;
+
+        </script>
+    </body>
+</html>
