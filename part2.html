@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Part 2 w3school</title>
+        <script src="JS_function.js"></script>
+        <script src="JS_Objects.js"></script>
+
+    </head>
+    <body>
+        <a id="span1"></a>
+        <script>
+            /*
+            JavaScript Arithmetic Operators
+            Arithmetic operators perform arithmetic on numbers (literals or variables).
+
+            Operator	Description
+            +	Addition
+            -	Subtraction
+            *	Multiplication
+            **	Exponentiation (ES2016)
+            /	Division
+            %	Modulus (Remainder)
+            ++	Increment
+            --	Decrement
+             */
+            let nuum1 =12 ;
+            let num2 =3 ;
+            console.log(nuum1 + num2)
+            console.log(nuum1 - num2)
+            console.log(nuum1 * num2)
+            console.log(nuum1 / num2)
+            console.log(nuum1 ** num2)
+            console.log(nuum1 % num2)
+            console.log(nuum1++)
+            console.log(num2--)
+            console.log(++nuum1)
+            console.log(--num2)
+            document.getElementById("span1").href='https://www.w3schools.com/js/js_precedence.asp'
+            document.getElementById("span1").innerHTML='javaScript Operator Precedence'
+            document.getElementById("span1").target='_blank'
+
+            /*
+            JavaScript Assignment
+            JavaScript Assignment Operators
+            Assignment operators assign values to JavaScript variables.
+
+            Operator	Example	Same As
+            =    x = y          x = y
+            +=   x += y         x = x + y
+            -=   x -= y         x = x - y
+            *=   x *= y         x = x * y
+            /=   x /= y         x = x / y
+            %=   x %= y         x = x % y
+            **=  x **= y        x = x ** y          
+            Shift Assignment Operators
+            Operator	Example	Same As
+            <<=         x <<= y	    x = x << y
+            >>=         x >>= y	    x = x >> y
+            >>>=        x >>>= y	x = x >>> y
+            Bitwise Assignment Operators
+            Operator	Example	Same As
+            &=	     x &= y	    x = x & y
+            ^=	     x ^= y	    x = x ^ y
+            |=	     x |= y	    x = x | y
+            Logical Assignment Operators
+            Operator	Example	Same As
+            &&=	    x &&= y	    x = x && (x = y)
+            ||=	    x ||= y	    x = x || (x = y)
+            ??=	    x ??= y	    x = x ?? (x = y)
+            */
+            let x =4 ;
+            let y =2 ;
+            console.log("Assignment")
+            console.log(x) ;
+            console.log(x += y) ;
+            console.log(x -= y) ;
+            console.log(x *= y) ;
+            console.log(x /= y) ;
+            console.log(x %= y) ;
+            console.log(x **= y) ;
+
+            //shift 
+            console.log("shift")
+
+            let x1 =4 ;
+            let y1 =2 ;
+            console.log(x1) ;
+            console.log(x1 >>= y1) ;
+            console.log(x1 <<= y1) ;
+            let z = -20 ;
+            console.log(z >>>= 1)
+            z = -20 ;
+            console.log(z >>= 1)
+            z = -20 ;
+            console.log(z <<= 1)
+
+
+            //bitwis
+            x =2 ;
+            console.log("bitwise")
+            console.log(x &=1) ;
+            console.log(x |= 3) ;
+            console.log(x ^= y) ;
+            //logical
+            x =2 ;
+            console.log("logical")
+            console.log(x &&=1) ;
+            console.log(x ||= 3) ;
+            let j ;
+            console.log( j ??= 33) ;
+
+        </script>
+       
+    </body>
+</html>
